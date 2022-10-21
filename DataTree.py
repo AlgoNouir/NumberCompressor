@@ -1,9 +1,4 @@
 
-
-from pprint import pprint
-from numpy import number
-
-
 data = {}
 
 inp = [
@@ -24,12 +19,11 @@ for numbers in inp:
         else:
             r = {}
             for n in numbers[num+1:][::-1]:
-                x = dict(r)
+                c = dict(r)
                 r = {}
-                r[n] = x
+                r[n] = c
             d[numbers[num]] = r
             break
-    if x:
-        data = {**data, **d}
+    if x: data = {**data, **d}
 
-pprint(data)
+print(data)
